@@ -1,0 +1,204 @@
+@import url(./node_modules/modern-normalize/modern-normalize.css);
+
+:root{
+    --color-main:rgb(180, 201, 224);
+    --color-accent:rgb(221, 168, 99);
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(42, 48, 54);
+}
+
+*:focus{
+    outline: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(63, 174, 238);
+    box-shadow: rgb(155, 155, 155) 0px 0px 8px;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    opacity: 0.5;
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-accent);
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none;
+}
+
+div#logo{
+    background-color: rgb(19, 31, 70);
+    opacity: 0.4;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+container{
+    background-color: rgb(231, 231, 231);
+    min-height: 100vh;
+    width: min(50rem, calc(100% - 20px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section{
+    display: flex;
+    flex: 1;
+    margin: 0px;
+    padding: 0px;
+}
+
+section#left{
+    background-color: rgb(190, 190, 190);
+    flex: 0.4;
+    width: 100%;
+    min-height:100vh; 
+    background-image: url(./images/canyon.jpg);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+section#right{
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+row{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+row#mid{
+    background-color: white;
+    box-shadow: rgb(199, 199, 199) 0px 5px 5px;
+}
+
+div#row{
+    display: flex;
+    flex: 1;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+div#field{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    border-style: none;
+    background-color: var(--color-main);
+    font-size: 1rem;
+    max-width: 180px;
+    padding: 0.3rem;
+    font-weight: 500;
+}
+
+input:valid{
+    box-shadow: rgb(51, 212, 19) 0px 3px;
+}
+
+input:invalid{
+    box-shadow: rgb(228, 97, 97) 0px 3px;
+}
+label:focus{
+    transform: translateY(20px);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label{
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: 0.2rem;
+}
+
+button{
+    width: 160px;
+    height: 50px;
+    margin: 20px 0px;
+    border-style: none;
+    background-color: var(--color-accent);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+button:active{
+    background-color: rgb(170, 132, 83);
+    transition: 0.1s;
+}
+
+@media (max-width: 700px) {
+    container {
+        flex-direction: column;
+    }
+
+    *{
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#left{
+        min-height: 8rem;
+    }
+}
+
